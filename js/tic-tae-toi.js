@@ -87,7 +87,7 @@ function checkWinner(type)
         let [a,b,c]=winIndexes[x];
         if(states[a]==states[b] && states[b]==states[c])
         {
-            winnerDiv.innerHTML=type?"Winner X !!!!! ":"winner O !!!!!";
+            winnerDiv.innerHTML=type?"Winner Player 1 !!!!! ":"Winner Player 2 !!!!!";
             setWinner(winIndexes[x]);
             setDisable();
             setCount(type);
@@ -122,7 +122,11 @@ function gameReset()
 }
 
 function gameRestart(){
+    var checkin=confirm("Are you Sure To Reset The Game ?")
+    if(checkin)
+    {
     location.reload();
+    }
 }
 
 function setCount(type)
