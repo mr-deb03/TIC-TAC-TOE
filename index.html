@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap-css\bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap-js\bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/aa64bf530b.js" crossorigin="anonymous"></script>
+    <link href="css\tic-tae-toi.css" rel="stylesheet">
+    <title>TIC-TAE-TOE</title>
+</head>
+<body>
+  <div class="container-fluid" id="login">
+    <div class="login-box">
+      <h1>login</h1>
+      <div class="textbox">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      <input type="text" placeholder="player 1" name="" value="">
+      </div>
+      <div class="textbox">
+      <i class="fa fa-user" aria-hidden="true"></i>
+      <input type="text" placeholder="player 2" name="" value="">
+      </div>
+      <input class = "button" type="button" name="" value = "submit" onclick="dis()">
+      
+      </div>
+  </div>
+      <h1 id="winner"></h1>
+    <div class="contanier" id="main">
+     <div id="record">
+      <h4>:Counter:</h4>
+        X :<span id="user1">  0  </span>  O:<span id="user2">  0  </span></div>
+        <div class="row" >
+            <div class="column" id="0"></div >
+            <div class="column" id="1"></div >
+            <div class="column" id="2"></div >
+        
+            <div class="column" id="3"></div >
+            <div class="column" id="4"></div >
+            <div class="column" id="5"></div >
+            
+            <div class="column" id="6"></div >
+            <div class="column" id="7"></div >
+            <div class="column" id="8"></div >
+            
+        </div>
+        <div id="end">
+        <button type="button" class="btn btn-success" onclick="gameReset()">Reset</button>
+        <button type="button" class="btn btn-success" onclick="gameRestart()">Restart</button></div>
+    </div>
+    <script src="js\tic-tae-toi.js"></script>
+</body>
+</html>
