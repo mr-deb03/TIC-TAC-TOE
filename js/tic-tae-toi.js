@@ -1,13 +1,25 @@
 
 function dis()
 {
-    document.querySelector("#login").style="display:none";
-    document.querySelector("#main").style="display:block;";
+    user1=document.querySelector("#user1").value;
+    user2=document.querySelector("#user2").value;
+    if(user1=="" || user2=="")
+    {
+        alert("Please Fill User Name To Start The Game ");
+    }
+    else
+    {
+        document.querySelector("#login").style.display="none";
+        document.querySelector("#main").style.display="block";
+    }
+    setName();
+   // document.querySelector("#login").style="display:none";
+   // document.querySelector("#main").style="display:block;";
 }
 
 var flag=true;
 var states=[1,0,1,0,1,0,0,1,0];
-var user1=0,user2=0;
+var player1=0,player2=0;
 var winnerDiv=document.querySelector("#winner");
 document.querySelector(".row").addEventListener('click',function(e){
     if(e.target.id)
@@ -87,7 +99,8 @@ function checkWinner(type)
         let [a,b,c]=winIndexes[x];
         if(states[a]==states[b] && states[b]==states[c])
         {
-            winnerDiv.innerHTML=type?"Winner Player 1 !!!!! ":"Winner Player 2 !!!!!";
+            winnerDiv.innerHTML=type?user1+"  Winner!!!!! ":user2+"  Winner!!!!!  ";
+            winnerDiv.style="display:block";
             setWinner(winIndexes[x]);
             setDisable();
             setCount(type);
@@ -102,6 +115,7 @@ function setWinner(index)
     {
         document.getElementById(index[i]).style.backgroundColor="green";
     }
+    
 }
 
 function gameReset()
@@ -117,6 +131,7 @@ function gameReset()
             windiv[i].innerHTML="";
             windiv[i].style.backgroundColor="transparent";
             winnerDiv.innerHTML="";
+            winnerDiv.style="display:none";
         }   
     }
 }
@@ -131,7 +146,12 @@ function gameRestart(){
 
 function setCount(type)
 {
-    (type)?user1++:user2++;
-    document.querySelector("#user1").innerHTML=user1;
-    document.querySelector("#user2").innerHTML=user2;
+    (type)?player1++:player2++;
+    document.querySelector("#play1").innerHTML=player1;
+    document.querySelector("#play2").innerHTML=player2;
+}
+
+function setName(){
+    document.querySelector("#pname1").innerHTML=user1+": ";
+    document.querySelector("#pname2").innerHTML=" "+user2+": ";
 }
