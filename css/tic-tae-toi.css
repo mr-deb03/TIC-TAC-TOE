@@ -1,6 +1,6 @@
 
 #login{
-  height: 75px;
+  height: 713px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,17 +49,17 @@
   margin: 0 10px;
 }
 .button{
-    width: 100%;
-    background: none;
-    border: 2px solid #4caf50;
-    color: white;
-    padding: 5px;
-    font-size: 23px;
-    cursor: pointer;
-    margin: 12px 0;
+  width: 100%;
+  background: none;
+  border: 2px solid #4caf50;
+  color: white;
+  padding: 5px;
+  font-size: 23px;
+  cursor: pointer;
+  margin: 12px 0;
 }
 body{
-    background:linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background:linear-gradient(to right, #0f2027, #203a43, #2c5364);
 }
 * {
     box-sizing: border-box;
@@ -67,9 +67,9 @@ body{
 #main{
   background-repeat: no-repeat;
   background-size: cover;
-  color:red;
-  height: 600px;
+  height: 663px;
   width: 600px;
+  color: red;
   margin-left:120px;
   margin-top: 0px ;
   padding: 0%;

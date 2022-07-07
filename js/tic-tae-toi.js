@@ -36,6 +36,7 @@ function setVal(curDiv)
             curDiv.innerHTML='X';
             states[id]='X';
             flag=!flag;
+            checkWinner(!flag);
         }
 
     }
@@ -46,10 +47,9 @@ function setVal(curDiv)
             curDiv.innerHTML='O';
             states[id]='O';
             flag=!flag;
+            checkWinner(!flag);
         }
     }
-    checkWinner(!flag);
-    console.log(states);
 }
 
 function setDisable()
@@ -131,7 +131,7 @@ function gameReset()
             windiv[i].innerHTML="";
             windiv[i].style.backgroundColor="transparent";
             winnerDiv.innerHTML="";
-            winnerDiv.style="display:none";
+           winnerDiv.style="display:none";
         }   
     }
 }
@@ -146,6 +146,7 @@ function gameRestart(){
 
 function setCount(type)
 {
+    console.log(type);
     (type)?player1++:player2++;
     document.querySelector("#play1").innerHTML=player1;
     document.querySelector("#play2").innerHTML=player2;
